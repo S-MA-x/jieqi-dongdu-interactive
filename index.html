@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10191b" />
+    <title>节气东渡｜互动影像</title>
+    <link rel="stylesheet" href="styles.css?v=20261017-2" />
+  </head>
+  <body>
+    <main class="experience-shell">
+      <section class="opening-screen" id="openingScreen" aria-labelledby="openingTitle">
+        <div class="opening-stars" aria-hidden="true"></div>
+        <div class="opening-content">
+          <p class="eyebrow">INTERACTIVE FILM · 03:49</p>
+          <h1 id="openingTitle">节气东渡</h1>
+          <p class="opening-jp">同じ種から、異なる花が咲かせた。</p>
+          <p class="opening-copy">跟随一粒跨海而来的节气种子，<br />在三个互动中聆听土地、生活与时间。</p>
+          <button class="start-button" id="startButton" type="button">
+            <span>开始体验</span>
+            <i aria-hidden="true">→</i>
+          </button>
+          <p class="opening-note">建议佩戴耳机 · 横屏体验更佳</p>
+        </div>
+      </section>
+
+      <section class="player-screen is-hidden" id="playerScreen" aria-label="节气东渡互动播放页">
+        <header class="topbar">
+          <a class="wordmark" href="#restart" id="restartLink" aria-label="重新开始">
+            <span>节气东渡</span>
+            <small>THE JOURNEY OF 24 SOLAR TERMS</small>
+          </a>
+          <div class="top-actions">
+            <button class="sound-button" id="soundButton" type="button" aria-pressed="false">开启声音</button>
+            <button class="restart-button" id="restartButton" type="button">重看</button>
+          </div>
+        </header>
+
+        <div class="film-frame" id="filmFrame">
+          <video class="film-video" id="filmVideo" playsinline preload="auto"></video>
+          <div class="video-fallback" id="videoFallback" aria-hidden="true">
+            <div class="fallback-sky"></div>
+            <div class="fallback-landscape"></div>
+            <div class="fallback-copy">
+              <p class="fallback-kicker" id="fallbackKicker">INTERACTIVE FILM</p>
+              <h2 id="fallbackTitle">节气东渡</h2>
+              <p id="fallbackBody">正在等待 LibTV 视频素材</p>
+            </div>
+          </div>
+
+          <div class="scene-chrome">
+            <div class="scene-number" id="sceneNumber">01</div>
+            <div class="scene-title" id="sceneTitle">启程</div>
+          </div>
+
+          <section class="interaction-layer" id="interactionLayer" aria-live="polite"></section>
+          <section class="feedback-layer" id="feedbackLayer" aria-live="polite"></section>
+          <div class="loading-mark is-hidden" id="loadingMark">加载片段中</div>
+        </div>
+
+        <footer class="transport" aria-label="影片控制">
+          <button class="play-button" id="playButton" type="button" aria-label="暂停或播放">Ⅱ</button>
+          <div class="progress-control" id="progressControl">
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressFill"></span>
+              <i class="timeline-point point-one"></i>
+              <i class="timeline-point point-two"></i>
+              <i class="timeline-point point-three"></i>
+            </div>
+            <input class="progress-slider" id="progressSlider" type="range" min="0" max="228.614" step="0.01" value="0" aria-label="拖动影片进度" aria-valuetext="00:00" />
+            <output class="progress-tooltip" id="progressTooltip" for="progressSlider">00:00</output>
+          </div>
+          <div class="time-label" id="timeLabel">00:00 / 03:49</div>
+        </footer>
+      </section>
+    </main>
+    <script src="app.js?v=20261017-3"></script>
+  </body>
+</html>
